@@ -1,0 +1,11 @@
+@import "../../theme/variables.scss";
+
+ion-content {
+    ion-list {
+        ion-item {
+            ion-icon {
+                color:$themColor;
+            }
+        }
+    }
+}

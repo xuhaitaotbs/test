@@ -4,7 +4,7 @@ import { Dispatcher } from "../core/Dispatcher";
 import { HttpService } from "../core/HttpService";
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
-import { ChartComponent } from '../pages/chart/chart';
+import { ChecklistComponent } from '../pages/checklist/checklist';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -12,7 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   declarations: [
     MyApp,
     AboutPage,
-    ChartComponent,
+    ChecklistComponent,
     HomePage,
     TabsPage
   ],
@@ -23,7 +23,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   entryComponents: [
     MyApp,
     AboutPage,
-    ChartComponent,
+    ChecklistComponent,
     HomePage,
     TabsPage
   ],

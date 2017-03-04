@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
-import {ResultInterface} from "./chart.interface";
+import {ResultInterface} from "./checklist.interface";
 
 @Injectable()
-export class ChartState {
+export class ChecklistState {
     dataInfo: ResultInterface;
 }

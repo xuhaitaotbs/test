@@ -1,22 +1,19 @@
 import { Injectable } from "@angular/core";
 import { Dispatcher } from "../../core/Dispatcher";
-import { ChartState } from "./chart.state";
-import { ChartActionType } from "./chart.action.type";
+import { ChecklistState } from "./checklist.state";
+import { ChecklistActionType } from "./checklist.action.type";
 
 @Injectable()
-export class ChartStore {
-  constructor(private dispatcher: Dispatcher, private state: ChartState) {
+export class ChecklistStore {
+  constructor(private dispatcher: Dispatcher, private state: ChecklistState) {
     this.dispatcher.bindActions({
-      type: ChartActionType.INIT,
+      type: ChecklistActionType.INIT,
       instance: this,
       handler: this.init
     });
   }
 
   public init(data) {
-
-    console.log(data);
-
     this.state.dataInfo = data.result;
   }
 }

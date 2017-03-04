@@ -5,6 +5,7 @@ import { HttpService } from "../core/HttpService";
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ChecklistComponent } from '../pages/checklist/checklist';
+import { ChecklistDetailComponent } from '../pages/checklistdetail/checklistdetail';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -13,6 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     AboutPage,
     ChecklistComponent,
+    ChecklistDetailComponent,
     HomePage,
     TabsPage
   ],
@@ -24,6 +26,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     AboutPage,
     ChecklistComponent,
+    ChecklistDetailComponent,
     HomePage,
     TabsPage
   ],

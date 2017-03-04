@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Description
+    </ion-title>
+   <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+         <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+   <ion-card>
+      <ion-card-header>
+        番号xxx
+      </ion-card-header>
+      <ion-card-content>
+          {{contents}}
+      </ion-card-content>
+       <ion-card-content>
+          <button ion-button outline>正解</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <button ion-button outline>誤り</button>
+      </ion-card-content>
+   </ion-card>
+</ion-content>

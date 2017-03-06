@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+        CheckList
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -14,5 +14,8 @@
       <p>{{data.contents}}</p>
     </ion-item>
   </ion-list>
-     <!--<button ion-button color="#00CD00" outline>Secondary</button>-->
+  <div style="text-align:center">
+       <button ion-button outline (click)="onSubmit()">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+       <button ion-button outline (click)="onCancel()">Cancel</button>
+  </div>
 </ion-content>

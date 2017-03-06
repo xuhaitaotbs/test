@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Description
+      CheckList質問内容
     </ion-title>
    <ion-buttons start>
-      <button ion-button (click)="dismiss()">
+      <button ion-button item-left (click)="dismiss()">
          <ion-icon name="arrow-round-back"></ion-icon>
       </button>
     </ion-buttons>
@@ -13,10 +13,10 @@
 <ion-content>
    <ion-card>
       <ion-card-header>
-        番号xxx
+        番号:{{id}}
       </ion-card-header>
       <ion-card-content>
-          {{contents}}
+          <h1>{{contents}}</h1>
       </ion-card-content>
        <ion-card-content>
           <button ion-button outline (click)="onSelect(true)">正解</button>&nbsp;&nbsp;&nbsp;&nbsp;

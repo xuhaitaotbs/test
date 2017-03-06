@@ -9,11 +9,13 @@ import { ChecklistComponent} from '../checklist/checklist';
 })
 export class ChecklistDetailComponent {
 
+  id : string;
   contents : string;
 
   constructor(private navCtrl: NavController, 
                 private params: NavParams, private viewCtrl: ViewController) {
       this.contents = this.params.get('question');
+      this.id = this.params.get('id');
   }
 
     dismiss() {

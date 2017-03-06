@@ -30,10 +30,10 @@ export class ChecklistComponent implements OnInit {
     //  this.idx0 = "radio-button-off";
   }
 
-  openModal(id : string, contents : string) {
+  openModal(id : number, contents : string) {
      console.log(id);
      console.log(contents);
-     var jsonParam = {"question": contents};
+     var jsonParam = {"id": id + 1, "question": contents};
      let modal = this.modalCtrl.create(ChecklistDetailComponent, jsonParam);
   
     modal.onDidDismiss(review => {
@@ -47,5 +47,13 @@ export class ChecklistComponent implements OnInit {
 	  });
 
     modal.present();
+  }
+
+  onSubmit() {
+
+  }
+
+  onCancel() {
+
   }
 }

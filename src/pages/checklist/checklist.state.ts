@@ -4,4 +4,6 @@ import {ResultInterface} from "./checklist.interface";
 @Injectable()
 export class ChecklistState {
     dataInfo: ResultInterface;
+    status : number;
+    message: string;
 }

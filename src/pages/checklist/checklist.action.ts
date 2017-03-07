@@ -9,10 +9,17 @@ export default class ChecklistAction {
   }
 
   public init() {
-    // let observable = this.httpService.get('./data/qa-init.json', {});
     let observable = this.httpService.getFakeData('assets/checklist.json', {});
     observable.subscribe(
       (data) => this.dispatcher.dispatch(ChecklistActionType.INIT, data)
+    );
+    return observable;
+  }
+
+  public save() {
+    let observable = this.httpService.getFakeData('assets/checklistSave.json', {});
+    observable.subscribe(
+      (data) => this.dispatcher.dispatch(ChecklistActionType.SAVE, data)
     );
     return observable;
   }

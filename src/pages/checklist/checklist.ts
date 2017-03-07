@@ -4,6 +4,7 @@ import { ChecklistState } from "./checklist.state";
 import { ChecklistStore } from "./checklist.store";
 import { NavController } from "ionic-angular/index";
 import { ModalController} from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 import { ChecklistDetailComponent} from '../checklistdetail/checklistdetail';
 
 @Component({
@@ -13,24 +14,17 @@ import { ChecklistDetailComponent} from '../checklistdetail/checklistdetail';
 })
 export class ChecklistComponent implements OnInit {
 
-  idx0 : string;
-//   ionName2 : string;
-//   ionName3 : string;
-
   constructor(private action: ChecklistAction, private state: ChecklistState,
-         private store: ChecklistStore, public navCtrl: NavController,
-         private modalCtrl: ModalController) {
+         private store: ChecklistStore, private navCtrl: NavController,
+         private modalCtrl: ModalController, private alertCtrl: AlertController) {
       this.ngOnInit();
   }
 
   public ngOnInit() {
       this.action.init();
-    //   this.ionName1 = "radio-button-off";
-    //   this.ionName2 = "radio-button-off";
-    //  this.idx0 = "radio-button-off";
   }
 
-  openModal(id : number, contents : string) {
+  public openModal(id : number, contents : string) {
      console.log(id);
      console.log(contents);
      var jsonParam = {"id": id + 1, "question": contents};
@@ -49,11 +43,23 @@ export class ChecklistComponent implements OnInit {
     modal.present();
   }
 
-  onSubmit() {
-
+  public onSubmit() {
+    let observable = this.action.save();
+    observable.subscribe((data) => {
+        this.alertMessage()
+    });
   }
 
-  onCancel() {
+  public onReset() {
+      this.ngOnInit();
+  }
 
+  private alertMessage() {
+      let alert = this.alertCtrl.create({
+            title: 'Message',
+            subTitle: this.state.message,
+            buttons: ['OK']
+      });
+      alert.present();
   }
 }

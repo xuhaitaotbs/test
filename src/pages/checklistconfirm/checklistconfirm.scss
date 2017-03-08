@@ -1,0 +1,120 @@
+//---------------------------------------- bugComponent用 ----------------------------------------
+//@import "../../theme/variables.scss";
+.bug-card {
+  padding: 0 10px 15px 10px;
+
+  .bug-title {
+    border: 0;
+    font-size: 18px;
+    padding: 0;
+
+    .weekly-task-details-list-item {
+      display: flex;
+      // div {
+      //       &.bug-new-title {
+      //           background: color($colors, task-on-schedule-color);
+      //       }
+
+      //       &.bug-in-progress-title {
+      //           background: color($colors, task-delay-color);
+      //       }
+      // }
+    }
+
+    .bug-title-name {
+      font-weight: bold;
+    }
+
+    .bug-title-detail {
+      font-size: 16px;
+      text-align: right;
+
+      .bug-title-detail-name {
+        display: inline-block;
+        line-height: 0.8;
+      }
+
+      ion-icon {
+        width: 10px;
+      }
+    }
+
+    .item-inner {
+      padding: 0;
+      border: none;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    .label {
+      margin: 0;
+    }
+  }
+
+  .bug-canvas {
+    padding: 0;
+
+    .item-inner {
+      border: none;
+      padding-right: 0;
+    }
+
+    .bug-canvas-title {
+      float: right;
+      font-size: 12px;
+      margin: 0;
+      width: 30%;
+
+       div {
+      //   height: 28px;
+      //   padding: 6px 0;
+      //   border-bottom: 1px solid color($colors, gray-color);
+           // width: 30%;
+
+      //   p {
+      //     display: inline-flex;
+      //     margin-right: 10px;
+      //     height: 16px;
+      //     width: 50px;
+      //     border-radius: 3px;
+      //   //   border: 1px solid color($colors, gray-color);
+
+      //      &.bug-new-title {
+      //        background: color($colors, task-on-schedule-color);
+      //      }
+
+      //      &.bug-in-progress-title {
+      //        background: color($colors, task-delay-color);
+      //      }
+
+      //   //   &.bug-fixed-title {
+      //   //     background: color($colors, darkblue-color);
+      //   //   }
+
+      //   //   &.bug-retesting-title {
+      //   //     background: color($colors, lightblue-color);
+      //   //   }
+
+      //   //   &.bug-closed-title {
+      //   //     background: color($colors, black-color);
+      //   //   }
+      //   }
+       }
+    }
+    .bug-canvas-area {
+      margin: 0;
+      width: 70%;
+
+      // .bug-canvas {
+      //   float: right;
+      //   width: 100%;
+
+      //   .canvas {
+      //     float: right;
+      //     width: 280px;
+      //   }
+      // }
+    }
+  }
+}

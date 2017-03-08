@@ -6,6 +6,7 @@ import { NavController } from "ionic-angular/index";
 import { ModalController} from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { ChecklistDetailComponent} from '../checklistdetail/checklistdetail';
+import { ChecklistConfirmComponent} from '../checklistconfirm/checklistconfirm';
 
 @Component({
   selector: "checklist",
@@ -14,9 +15,12 @@ import { ChecklistDetailComponent} from '../checklistdetail/checklistdetail';
 })
 export class ChecklistComponent implements OnInit {
 
-  constructor(private action: ChecklistAction, private state: ChecklistState,
-         private store: ChecklistStore, private navCtrl: NavController,
-         private modalCtrl: ModalController, private alertCtrl: AlertController) {
+  constructor(private action: ChecklistAction,
+         private state: ChecklistState,
+         private store: ChecklistStore,
+         private navCtrl: NavController,
+         private modalCtrl: ModalController, 
+         private alertCtrl: AlertController) {
       this.ngOnInit();
   }
 
@@ -29,8 +33,8 @@ export class ChecklistComponent implements OnInit {
      console.log(contents);
      var jsonParam = {"id": id + 1, "question": contents};
      let modal = this.modalCtrl.create(ChecklistDetailComponent, jsonParam);
-  
-    modal.onDidDismiss(review => {
+     //callbackメソッド
+     modal.onDidDismiss(review => {
 	      if (review) {
 	           if (review.flag) {
                    this.state.dataInfo[id].ionName = "checkmark-circle";
@@ -40,26 +44,28 @@ export class ChecklistComponent implements OnInit {
 	     }
 	  });
 
-    modal.present();
+     modal.present();
   }
 
   public onSubmit() {
-    let observable = this.action.save();
-    observable.subscribe((data) => {
-        this.alertMessage()
-    });
+       let observable = this.action.save();
+       observable.subscribe((data) => {
+            var jsonParam = {"message": this.state.message};
+            let modal = this.modalCtrl.create(ChecklistConfirmComponent, jsonParam);
+            modal.present();
+       });
   }
 
   public onReset() {
       this.ngOnInit();
   }
 
-  private alertMessage() {
-      let alert = this.alertCtrl.create({
-            title: 'Message',
-            subTitle: this.state.message,
-            buttons: ['OK']
-      });
-      alert.present();
-  }
+//   private alertMessage() {
+//       let alert = this.alertCtrl.create({
+//             title: 'Message',
+//             subTitle: this.state.message,
+//             buttons: ['OK']
+//       });
+//       alert.present();
+//   }
 }

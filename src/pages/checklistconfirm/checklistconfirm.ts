@@ -14,8 +14,13 @@ export class ChecklistConfirmComponent implements OnInit {
   public doughnutChartLabels:string[] = ['正確率', '錯誤率'];
   public barcolors = [{ backgroundColor: "rgb(255, 193, 206)"}, {backgroundColor: "rgb(255, 226, 154)"}];//red
 
-  public doughnutChartData:number[] = [5, 5];
+  public doughnutChartData:number[] = [8, 5];
   public doughnutChartType:string = 'doughnut';
+
+  private CHART_OPTIONS = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
 
   constructor(private navCtrl: NavController, 
                 private params: NavParams, private viewCtrl: ViewController) {

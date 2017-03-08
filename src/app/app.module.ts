@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ChecklistComponent } from '../pages/checklist/checklist';
 import { ChecklistDetailComponent } from '../pages/checklistdetail/checklistdetail';
+import { ChecklistConfirmComponent } from '../pages/checklistconfirm/checklistconfirm';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
@@ -24,6 +25,7 @@ import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
     AboutPage,
     ChecklistComponent,
     ChecklistDetailComponent,
+    ChecklistConfirmComponent,
     HomePage,
     TabsPage,
     BarChartDemoComponent,
@@ -44,6 +46,7 @@ import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
     AboutPage,
     ChecklistComponent,
     ChecklistDetailComponent,
+    ChecklistConfirmComponent,
     HomePage,
     TabsPage,
     BarChartDemoComponent,

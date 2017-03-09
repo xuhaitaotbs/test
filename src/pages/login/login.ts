@@ -1,11 +1,9 @@
-import {Component, OnInit,  trigger, state, style, transition, animate, keyframes } from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import  LoginAction  from "./login.action";
 import { LoginState } from "./login.state";
 import { LoginStore } from "./login.store";
-import { TabsPage} from '../tabs/tabs';
-import { ChecklistComponent} from '../checklist/checklist';
+import { ProfileComponent} from '../profile/profile';
 import { NavController } from "ionic-angular/index";
-
 
 @Component({
   selector: "login",
@@ -76,6 +74,6 @@ export class LoginComponent implements OnInit {
 
   public login() {
       // 設定画面へ遷移する
-      this.navCtrl.push(TabsPage, {"user":"haitao.a.xu"});
+      this.navCtrl.push(ProfileComponent, {"user":"haitao.a.xu"});
   }
 }

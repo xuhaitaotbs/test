@@ -1,13 +1,22 @@
-<ion-content>
+<ion-content class="profile-item">
     <ion-list>
         <ion-item>
             <span>ファイル設定</span>
         </ion-item>
-         <ion-item class="profile-item">
-              <div class="circle"></div>
-                    <!--<div style="width: 150px; height: 150px; border: 1px;background:#123456; " >
-                    
-                    </div>-->111
+         <ion-item>
+              <div class="square" on-tap="takePicture();">
+                 <div style="height:10px"></div>
+                 <div class="circle"></div>
+                 <div class="camera">
+                     <ion-icon name="camera" class="camera-margin-left"></ion-icon>
+                 </div>
+              </div>
          </ion-item>
+         <ion-item>
+             <img [src]="base64Image" *ngIf="base64Image" />
+         </ion-item>
+         <div style="text-align:center">
+             <button ion-button outline (click)="onSave()">save</button>
+         </div>
     </ion-list>
 </ion-content>

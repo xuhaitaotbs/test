@@ -1,15 +1,25 @@
 .profile-item {
-    border: transparent;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align:center;
-}
-
-.circle{
-    width:100px;
-    height:100px;
-    background-color:$themColor;
-    border-radius:50px;
-    margin-right: 10px;
+    .square {
+         width:140px;
+         height:140px;
+         background-color:#C5C1AA;
+         margin: 0 auto;// 居中
+        .circle{
+            width:100px;
+            height:100px;
+            background-color:#BCD2EE;
+            border-radius:50%;
+            //margin: 0 auto;// 居中
+            // margin:10px 10px 10px 10px;
+            //margin: 0 auto;// 居中
+            margin:0px auto 0px auto ;
+        }
+        .camera {
+             font-size: 30px;
+             background-color:#D8D8D8;
+             .camera-margin-left {
+                margin-left: 60px;
+            }
+        }
+   }
 }

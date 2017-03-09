@@ -1,0 +1,41 @@
+<ion-header class="loginHeader">
+    <ion-navbar >
+        <ion-title>
+            <div>Welcome to SonyT Project</div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="login">
+
+    <div padding  id="cloud-layer">
+
+        <ion-row>
+            <ion-col>
+                <img  src="../../assets/image/logo.JPG" />
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-list inset>
+                    <ion-item>
+                        <ion-label>EID</ion-label>
+                        <ion-input type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Password</ion-label>
+                        <ion-input type="password"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button class="login-button" (click)="login()">Login</button>
+            </ion-col>
+        </ion-row>
+
+    </div>
+
+</ion-content>

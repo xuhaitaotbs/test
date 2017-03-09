@@ -19,6 +19,8 @@ import { PieChartDemoComponent } from '../pages/chartjs/pie-chart-demo';
 import { PolarAreaChartDemoComponent } from '../pages/chartjs/polar-area-chart-demo';
 import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
 
+import { LoginComponent } from '../pages/login/login';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -28,13 +30,14 @@ import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
     ChecklistConfirmComponent,
     HomePage,
     TabsPage,
-    BarChartDemoComponent,
-    BaseChartDemoComponent,
-    DoughnutChartDemoComponent,
-    LineChartDemoComponent,
-    PieChartDemoComponent,
-    PolarAreaChartDemoComponent,
-    RadarChartDemoComponent
+    BarChartDemoComponent,//chartJS
+    BaseChartDemoComponent,//chartJS
+    DoughnutChartDemoComponent,//chartJS
+    LineChartDemoComponent,//chartJS
+    PieChartDemoComponent,//chartJS
+    PolarAreaChartDemoComponent,//chartJS
+    RadarChartDemoComponent,//chartJS
+    LoginComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -49,13 +52,14 @@ import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
     ChecklistConfirmComponent,
     HomePage,
     TabsPage,
-    BarChartDemoComponent,
-    BaseChartDemoComponent,
-    DoughnutChartDemoComponent,
-    LineChartDemoComponent,
-    PieChartDemoComponent,
-    PolarAreaChartDemoComponent,
-    RadarChartDemoComponent
+    BarChartDemoComponent,//chartJS
+    BaseChartDemoComponent,//chartJS
+    DoughnutChartDemoComponent,//chartJS
+    LineChartDemoComponent,//chartJS
+    PieChartDemoComponent,//chartJS
+    PolarAreaChartDemoComponent,//chartJS
+    RadarChartDemoComponent,//chartJS
+    LoginComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService]
 })

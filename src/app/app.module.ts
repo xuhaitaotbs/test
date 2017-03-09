@@ -20,6 +20,7 @@ import { PolarAreaChartDemoComponent } from '../pages/chartjs/polar-area-chart-d
 import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
 
 import { LoginComponent } from '../pages/login/login';
+import { ProfileComponent } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LoginComponent } from '../pages/login/login';
     PieChartDemoComponent,//chartJS
     PolarAreaChartDemoComponent,//chartJS
     RadarChartDemoComponent,//chartJS
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -59,7 +61,8 @@ import { LoginComponent } from '../pages/login/login';
     PieChartDemoComponent,//chartJS
     PolarAreaChartDemoComponent,//chartJS
     RadarChartDemoComponent,//chartJS
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService]
 })

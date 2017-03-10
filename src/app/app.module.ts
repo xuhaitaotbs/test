@@ -4,6 +4,7 @@ import { Dispatcher } from "../core/Dispatcher";
 import { HttpService } from "../core/HttpService";
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
+import { ChecklistMenuComponent } from '../pages/checklist/checklistmenu/checklistmenu';
 import { ChecklistComponent } from '../pages/checklist/checklist/checklist';
 import { ChecklistDetailComponent } from '../pages/checklist/checklistdetail/checklistdetail';
 import { ChecklistConfirmComponent } from '../pages/checklist/checklistconfirm/checklistconfirm';
@@ -26,6 +27,7 @@ import { ProfileComponent } from '../pages/profile/profile';
   declarations: [
     MyApp,
     AboutPage,
+    ChecklistMenuComponent,
     ChecklistComponent,
     ChecklistDetailComponent,
     ChecklistConfirmComponent,
@@ -49,6 +51,7 @@ import { ProfileComponent } from '../pages/profile/profile';
   entryComponents: [
     MyApp,
     AboutPage,
+    ChecklistMenuComponent,
     ChecklistComponent,
     ChecklistDetailComponent,
     ChecklistConfirmComponent,

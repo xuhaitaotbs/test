@@ -4,9 +4,9 @@ import { Dispatcher } from "../core/Dispatcher";
 import { HttpService } from "../core/HttpService";
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
-import { ChecklistComponent } from '../pages/checklist/checklist';
-import { ChecklistDetailComponent } from '../pages/checklistdetail/checklistdetail';
-import { ChecklistConfirmComponent } from '../pages/checklistconfirm/checklistconfirm';
+import { ChecklistComponent } from '../pages/checklist/checklist/checklist';
+import { ChecklistDetailComponent } from '../pages/checklist/checklistdetail/checklistdetail';
+import { ChecklistConfirmComponent } from '../pages/checklist/checklistconfirm/checklistconfirm';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
@@ -21,7 +21,6 @@ import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
 
 import { LoginComponent } from '../pages/login/login';
 import { ProfileComponent } from '../pages/profile/profile';
-import { MenuComponent } from '../pages/menu/menu';
 
 @NgModule({
   declarations: [
@@ -40,8 +39,7 @@ import { MenuComponent } from '../pages/menu/menu';
     PolarAreaChartDemoComponent,//chartJS
     RadarChartDemoComponent,//chartJS
     LoginComponent,
-    ProfileComponent,
-    MenuComponent
+    ProfileComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -64,8 +62,7 @@ import { MenuComponent } from '../pages/menu/menu';
     PolarAreaChartDemoComponent,//chartJS
     RadarChartDemoComponent,//chartJS
     LoginComponent,
-    ProfileComponent,
-    MenuComponent
+    ProfileComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService]
 })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
 import { AboutPage } from '../about/about';
-import { ChecklistComponent } from '../checklist/checklist';
+import { ChecklistComponent } from '../checklist/checklist/checklist';
 
 @Component({
   templateUrl: 'tabs.html'

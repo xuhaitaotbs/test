@@ -1,0 +1,13 @@
+@import "../../../theme/variables.scss";
+
+ion-header {
+    ion-toolbar {
+        ion-buttons {
+            button {
+                ion-icon {
+                    color:$themColor;
+                }
+            }
+        }
+    }
+}

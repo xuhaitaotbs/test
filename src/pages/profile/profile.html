@@ -15,8 +15,42 @@
          <ion-item>
              <img [src]="base64Image" *ngIf="base64Image" />
          </ion-item>
-         <div style="text-align:center">
-             <button ion-button outline (click)="onSave()">save</button>
-         </div>
+         <ion-item>
+            <ion-icon name="arrow-up" item-left></ion-icon>
+            <ion-label>レベル</ion-label>
+            <ion-select [(ngModel)]="level">
+                <ion-option value="L1">Mgr以上</ion-option>
+                <ion-option value="L2">AM</ion-option>
+                <ion-option value="L3">TL</ion-option>
+                <ion-option value="L4">SSE</ion-option>
+                <ion-option value="L5">SE</ion-option>
+                <ion-option value="L6">ASE</ion-option>
+            </ion-select>
+         </ion-item>
+          <ion-item>
+            <ion-icon name="people" item-left></ion-icon>
+            <ion-label>グルプ</ion-label>
+            <ion-select [(ngModel)]="group">
+                <ion-option value="G1">Corp</ion-option>
+                <ion-option value="G2">SCM/LOG</ion-option>
+                <ion-option value="G3">TV</ion-option>
+                <ion-option value="G4">SAP/Arch</ion-option>
+                <ion-option value="G5">SMOJ</ion-option>
+                <ion-option value="G6">NEWIT</ion-option>
+                <ion-option value="G7">PMO</ion-option>
+                <ion-option value="G8">その他</ion-option>
+            </ion-select>
+         </ion-item>
+         <ion-item>
+            <ion-icon name="contact" item-left></ion-icon>
+            <ion-label>ニックネーム</ion-label>
+            <ion-input type="text"></ion-input>
+         </ion-item>
+         <ion-item>
+            <ion-icon name="phone-portrait" item-left></ion-icon>
+            <ion-label>電話番号</ion-label>
+            <ion-input type="text"></ion-input>
+         </ion-item>
+         <button ion-button color="secondary" full outline (click)="onSave()">確認</button>
     </ion-list>
 </ion-content>

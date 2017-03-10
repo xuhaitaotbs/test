@@ -13,7 +13,10 @@
               </div>
          </ion-item>
          <ion-item>
-             <img [src]="base64Image" *ngIf="base64Image" />
+             <img ng-src="data:image/jpeg; base64,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"><br>
+
+             <!--http://blog.csdn.net/zahngjialiang/article/details/54632514-->
+
          </ion-item>
          <ion-item>
             <ion-icon name="arrow-up" item-left></ion-icon>
@@ -51,6 +54,12 @@
             <ion-label>電話番号</ion-label>
             <ion-input type="text"></ion-input>
          </ion-item>
-         <button ion-button color="secondary" full outline (click)="onSave()">確認</button>
+         <ion-item>
+             <div align="center">
+                <button ion-button color="secondary" round outline (click)="onSave()" class="btn_confirm">
+                    確認
+                </button>
+             </div>
+         </ion-item>
     </ion-list>
 </ion-content>

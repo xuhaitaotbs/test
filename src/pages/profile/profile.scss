@@ -1,10 +1,10 @@
 .profile-item {
     .square {
          width:140px;
-         height:140px;
+         height:135px;
          background-color:#C5C1AA;
          margin: 0 auto;// 居中
-        .circle{
+        .circle {
             width:100px;
             height:100px;
             background-color:#BCD2EE;
@@ -15,11 +15,15 @@
             margin:0px auto 0px auto ;
         }
         .camera {
-             font-size: 30px;
+             font-size: 20px;
              background-color:#D8D8D8;
              .camera-margin-left {
                 margin-left: 60px;
-            }
+             }
         }
    }
+    .btn_confirm {
+        height: 50px;
+        width: 80%;
+    }
 }

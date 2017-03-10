@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { LoginComponent } from '../pages/login/login';
+import { ProfileComponent } from "../pages/profile/profile";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-   rootPage = LoginComponent;
-  //rootPage = TabsPage;
+    
+  @ViewChild('content') nav;
+
+  rootPage = LoginComponent;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -17,5 +20,16 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+  }
+
+  public userSetting() {
+      this.nav.push(ProfileComponent, {"person" : "person"});
+  }
+
+  public passwordReset() {
+  }
+  
+  public logout() {
+    this.nav.popToRoot();
   }
 }

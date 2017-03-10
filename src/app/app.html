@@ -1,2 +1,21 @@
-<ion-nav [root]="rootPage"></ion-nav>
-
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>メニュー</ion-title>
+    </ion-toolbar>
+  </ion-header>
+   <ion-content>
+    <ion-list>
+    　　<ion-item menuClose (click)="userSetting()">
+           <ion-icon item-left name="person"></ion-icon>プロフィール設定
+       </ion-item>
+       <ion-item menuClose (click)="passwordReset()">
+           <ion-icon item-left name="key"></ion-icon>パスワード変更
+       </ion-item>
+       <ion-item menuClose (click)="logout()">
+           <ion-icon item-left name="log-out"></ion-icon>ログオフ
+       </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

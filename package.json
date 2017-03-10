@@ -39,7 +39,10 @@
     "cordova-plugin-statusbar",
     "cordova-plugin-device",
     "ionic-plugin-keyboard",
-    "cordova-plugin-splashscreen"
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-actionsheet",
+    "cordova-plugin-camera",
+    "call-number"
   ],
   "cordovaPlatforms": [],
   "description": "myApp: An Ionic project"

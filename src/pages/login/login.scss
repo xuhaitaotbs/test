@@ -1,11 +1,11 @@
-.loginHeader {
-    ion-title {
-        background-color: #42c7ff;
-    }
-}    
 .login {
 
     background-color: #42c7ff;
+
+    .title {
+        font-size: 25px;
+        color: #f6f6f6;
+    }
 
     scroll-content {
         display: flex;

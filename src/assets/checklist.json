@@ -3,13 +3,23 @@
    "result": [
          {"id":10001, "contents":"以前にもこのやり方で対応していた、或いは昔のベンダーさんもこのように対応していたので、やり方について疑う必要がない。","ionName":"radio-button-off"},
          {"id":10002, "contents":"ルール違反だが、Onshore側から要求や指示があるから、やってもよい。","ionName":"radio-button-off"},
-         {"id":10005, "contents":"自分の不注意や怠慢で作業ミスを起こしてしまうと、ACNにお金を払っているお客様に大変迷惑を掛ける。","ionName":"radio-button-off"},
-         {"id":10006, "contents":"CDC内部レビューもあるし、Onshore側のレビューもあるので、作業効率を上げるため成果物を提出する前に自分で再確認する必要がない。","ionName":"radio-button-off"},
-         {"id":10007, "contents":"自分の油断で作成した成果物に単純なミスがあって、他人に指摘されると恥ずかしいと思う。","ionName":"radio-button-off"},
-         {"id":10008, "contents":"作業手順書があっても、操作内容は簡単であっても、操作ミスの可能性はまたあるので、監視者としてしっかり確認しなければいけない。","ionName":"radio-button-off"},
-         {"id":10009, "contents":"作業担当者は手順書を確認せずに作業を実施することを見たら、監視者としてその行為を止まってもらう必要である。","ionName":"radio-button-off"},
-         {"id":10010, "contents":"納期については一旦お客様やOnshore側と合意したら、約束を守るため毎日の作業進捗を管理しなければならない。","ionName":"radio-button-off"},
-         {"id":10011, "contents":"予定工数と約束納期の通りに作業を完了しても、作業ミスや品質不良の納品物があれば、お客様は許容できない。","ionName":"radio-button-off"},
-         {"id":10012, "contents":"作業ルールやプロセスはあるが、Onshore側から早く対応してほしいという指示があるから、遵守しなくてよい。","ionName":"radio-button-off"}
+         {"id":10003, "contents":"自分の不注意や怠慢で作業ミスを起こしてしまうと、ACNにお金を払っているお客様に大変迷惑を掛ける。","ionName":"radio-button-off"},
+         {"id":10004, "contents":"CDC内部レビューもあるし、Onshore側のレビューもあるので、作業効率を上げるため成果物を提出する前に自分で再確認する必要がない。","ionName":"radio-button-off"},
+         {"id":10005, "contents":"自分の油断で作成した成果物に単純なミスがあって、他人に指摘されると恥ずかしいと思う。","ionName":"radio-button-off"},
+         {"id":10006, "contents":"作業手順書があっても、操作内容は簡単であっても、操作ミスの可能性はまたあるので、監視者としてしっかり確認しなければいけない。","ionName":"radio-button-off"},
+         {"id":10007, "contents":"作業担当者は手順書を確認せずに作業を実施することを見たら、監視者としてその行為を止まってもらう必要である。","ionName":"radio-button-off"},
+         {"id":10008, "contents":"納期については一旦お客様やOnshore側と合意したら、約束を守るため毎日の作業進捗を管理しなければならない。","ionName":"radio-button-off"},
+         {"id":10009, "contents":"予定工数と約束納期の通りに作業を完了しても、作業ミスや品質不良の納品物があれば、お客様は許容できない。","ionName":"radio-button-off"},
+         {"id":10010, "contents":"作業ルールやプロセスはあるが、Onshore側から早く対応してほしいという指示があるから、遵守しなくてよい。","ionName":"radio-button-off"},
+         {"id":20001, "contents":"以前にもこのやり方で対応していた、或いは昔のベンダーさんもこのように対応していたので、やり方について疑う必要がない。","ionName":"radio-button-off"},
+         {"id":20002, "contents":"ルール違反だが、Onshore側から要求や指示があるから、やってもよい。","ionName":"radio-button-off"},
+         {"id":20003, "contents":"自分の不注意や怠慢で作業ミスを起こしてしまうと、ACNにお金を払っているお客様に大変迷惑を掛ける。","ionName":"radio-button-off"},
+         {"id":20004, "contents":"CDC内部レビューもあるし、Onshore側のレビューもあるので、作業効率を上げるため成果物を提出する前に自分で再確認する必要がない。","ionName":"radio-button-off"},
+         {"id":20005, "contents":"自分の油断で作成した成果物に単純なミスがあって、他人に指摘されると恥ずかしいと思う。","ionName":"radio-button-off"},
+         {"id":20006, "contents":"作業手順書があっても、操作内容は簡単であっても、操作ミスの可能性はまたあるので、監視者としてしっかり確認しなければいけない。","ionName":"radio-button-off"},
+         {"id":20007, "contents":"作業担当者は手順書を確認せずに作業を実施することを見たら、監視者としてその行為を止まってもらう必要である。","ionName":"radio-button-off"},
+         {"id":20008, "contents":"納期については一旦お客様やOnshore側と合意したら、約束を守るため毎日の作業進捗を管理しなければならない。","ionName":"radio-button-off"},
+         {"id":20009, "contents":"予定工数と約束納期の通りに作業を完了しても、作業ミスや品質不良の納品物があれば、お客様は許容できない。","ionName":"radio-button-off"},
+         {"id":20010, "contents":"作業ルールやプロセスはあるが、Onshore側から早く対応してほしいという指示があるから、遵守しなくてよい。","ionName":"radio-button-off"}
          ]
  }

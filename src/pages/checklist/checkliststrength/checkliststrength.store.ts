@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
 import { Dispatcher } from "../../../core/Dispatcher";
-import { ChecklistState } from "./checklist.state";
-import { ChecklistActionType } from "./checklist.action.type";
+import { ChecklistStrengthState } from "./checkliststrength.state";
+import { ChecklistStrengthActionType } from "./checkliststrength.action.type";
 
 @Injectable()
-export class ChecklistStore {
-  constructor(private dispatcher: Dispatcher, private state: ChecklistState) {
-      this.dispatcher.bindActions({type: ChecklistActionType.INIT, instance: this, handler: this.init});
+export class ChecklistStrengthStore {
+  constructor(private dispatcher: Dispatcher, private state: ChecklistStrengthState) {
+      this.dispatcher.bindActions({type: ChecklistStrengthActionType.INIT, instance: this, handler: this.init});
 
-      this.dispatcher.bindActions({type: ChecklistActionType.SAVE, instance: this, handler: this.save});
+      this.dispatcher.bindActions({type: ChecklistStrengthActionType.SAVE, instance: this, handler: this.save});
   }
 
   public init(data) {

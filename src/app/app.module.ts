@@ -5,9 +5,9 @@ import { HttpService } from "../core/HttpService";
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ChecklistMenuComponent } from '../pages/checklist/checklistmenu/checklistmenu';
-import { ChecklistComponent } from '../pages/checklist/checklist/checklist';
 import { ChecklistWeekComponent } from '../pages/checklist/checklistweek/checklistweek';
 import { ChecklistMonthComponent } from '../pages/checklist/checklistmonth/checklistmonth';
+import { ChecklistStrengthComponent } from '../pages/checklist/checkliststrength/checkliststrength';
 import { ChecklistDetailComponent } from '../pages/checklist/checklistdetail/checklistdetail';
 import { ChecklistConfirmComponent } from '../pages/checklist/checklistconfirm/checklistconfirm';
 import { HomePage } from '../pages/home/home';
@@ -30,9 +30,9 @@ import { ProfileComponent } from '../pages/profile/profile';
     MyApp,
     AboutPage,
     ChecklistMenuComponent,
-    ChecklistComponent,
     ChecklistWeekComponent,
     ChecklistMonthComponent,
+    ChecklistStrengthComponent,
     ChecklistDetailComponent,
     ChecklistConfirmComponent,
     HomePage,
@@ -58,7 +58,7 @@ import { ProfileComponent } from '../pages/profile/profile';
     ChecklistMenuComponent,
     ChecklistWeekComponent,
     ChecklistMonthComponent,
-    ChecklistComponent,
+    ChecklistStrengthComponent,
     ChecklistDetailComponent,
     ChecklistConfirmComponent,
     HomePage,

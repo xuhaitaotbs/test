@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import  ChecklistAction  from "./checklist.action";
-import { ChecklistState } from "./checklist.state";
-import { ChecklistStore } from "./checklist.store";
+import  ChecklistStrengthAction  from "./checkliststrength.action";
+import { ChecklistStrengthState } from "./checkliststrength.state";
+import { ChecklistStrengthStore } from "./checkliststrength.store";
 import { NavController } from "ionic-angular/index";
 import { ModalController} from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
@@ -9,15 +9,15 @@ import { ChecklistDetailComponent} from '../checklistdetail/checklistdetail';
 import { ChecklistConfirmComponent} from '../checklistconfirm/checklistconfirm';
 
 @Component({
-  selector: "checklist",
-  providers: [ChecklistAction, ChecklistState, ChecklistStore],
-  templateUrl: "checklist.html",
+  selector: "checkliststrength",
+  providers: [ChecklistStrengthAction, ChecklistStrengthState, ChecklistStrengthStore],
+  templateUrl: "checkliststrength.html",
 })
-export class ChecklistComponent implements OnInit {
+export class ChecklistStrengthComponent implements OnInit {
 
-  constructor(private action: ChecklistAction,
-         private state: ChecklistState,
-         private store: ChecklistStore,
+  constructor(private action: ChecklistStrengthAction,
+         private state: ChecklistStrengthState,
+         private store: ChecklistStrengthStore,
          private navCtrl: NavController,
          private modalCtrl: ModalController, 
          private alertCtrl: AlertController) {
@@ -59,13 +59,4 @@ export class ChecklistComponent implements OnInit {
   public onReset() {
       this.ngOnInit();
   }
-
-//   private alertMessage() {
-//       let alert = this.alertCtrl.create({
-//             title: 'Message',
-//             subTitle: this.state.message,
-//             buttons: ['OK']
-//       });
-//       alert.present();
-//   }
 }

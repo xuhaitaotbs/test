@@ -1,8 +1,8 @@
 import {Injectable} from "@angular/core";
-import {ResultInterface} from "./checklist.interface";
+import {ResultInterface} from "./checkliststrength.interface";
 
 @Injectable()
-export class ChecklistState {
+export class ChecklistStrengthState {
     dataInfo: ResultInterface;
     status : number;
     message: string;

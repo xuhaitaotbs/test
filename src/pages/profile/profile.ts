@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
   public path;
   /*profilePicture: any = "https://www.gravatar.com/avatar/";*/
   //给image设置默认的图片
-  profilePicture: any="assets/image/zhujun.JPG";
+  profilePicture: any="assets/image/photo.png";
   constructor(private action: ProfileAction,
          private state: ProfileState,
          private store: ProfileStore,
@@ -44,7 +44,7 @@ export class ProfileComponent implements OnInit {
   }
 
   public showActionSheet() {
-    let buttonLabels = ['カメラ', '写真アルバム'];
+    let buttonLabels = ['カメラ起動', 'ライブラリから選択'];
     ActionSheet.show({
       'title': '選択してくだい！',
       'buttonLabels': buttonLabels

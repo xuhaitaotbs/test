@@ -8,22 +8,22 @@
 <ion-content class="profile-item">
     <ion-list>
          <ion-item>
-              <div class="square" on-tap="showActionSheet();">
+            <ion-icon name="" item-left></ion-icon>
+            <ion-label>haitao.a.xu</ion-label>
+         </ion-item>
+         <ion-item on-tap="showActionSheet();">
+              <ion-icon name="camera" item-left></ion-icon>
+              <img [src]="profilePicture"
+                style="height:100px; width:100px" />
+              <!--<div class="square" on-tap="showActionSheet();">
                  <div style="height:10px"></div>
                  <div class="circle"></div>
                  <div class="camera">
                      <ion-icon name="camera" class="camera-margin-left"></ion-icon>
                  </div>
-              </div>
+              </div>-->
+              <!--<ion-icon name="camera" item-right></ion-icon>-->
          </ion-item>
-         <ion-avatar style="text-align: center; " >
-            <img [src]="profilePicture"
-                style="height:150px; width:150px" />
-        </ion-avatar>
-
-         <!--<ion-item>
-             <img ng-src="data:image/jpeg; base64,"><br>
-             http://blog.csdn.net/zahngjialiang/article/details/54632514-->
          <ion-item>
             <ion-icon name="arrow-up" item-left></ion-icon>
             <ion-label>レベル</ion-label>

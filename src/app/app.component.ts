@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { LoginComponent } from '../pages/login/login';
 import { ProfileComponent } from "../pages/profile/profile";
+import { PasswordsetComponent } from "../pages/passwordset/passwordset";
 
 @Component({
   templateUrl: 'app.html'
@@ -27,6 +28,7 @@ export class MyApp {
   }
 
   public passwordReset() {
+      this.nav.push(PasswordsetComponent);
   }
   
   public logout() {

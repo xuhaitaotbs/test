@@ -1,8 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        プロフィール設定
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 <ion-content class="profile-item">
     <ion-list>
-        <ion-item>
-            <span>プロフィール設定</span>
-        </ion-item>
          <ion-item>
               <div class="square" on-tap="showActionSheet();">
                  <div style="height:10px"></div>
@@ -56,12 +60,14 @@
             <ion-label>電話番号</ion-label>
             <ion-input type="text"></ion-input>
          </ion-item>
-         <ion-item>
-             <div align="center">
-                <button ion-button color="secondary" round outline (click)="onSave()" class="btn_confirm">
-                    確認
-                </button>
-             </div>
-         </ion-item>
     </ion-list>
 </ion-content>
+<ion-footer>
+  <ion-navbar>
+    <div align="center">
+        <button ion-button color="secondary" outline (click)="onSave()">
+            確認
+        </button>
+    </div>
+  </ion-navbar>
+</ion-footer>

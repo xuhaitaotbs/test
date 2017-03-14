@@ -1,51 +1,49 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title>
+        CheckList結果
+    </ion-title>
+  </ion-navbar>
+</ion-header>-->
 <ion-content>
-    <ion-card class="bug-card">
-      <ion-card-content>
-          <h1>{{message}}</h1>
-      </ion-card-content>
+  <ion-card>
+    <ion-card-header>
+      CheckList結果
+    </ion-card-header>
+    <ion-card-content>
+      <h1>{{message}}</h1>
+      <canvas baseChart
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType"
+            [options]="CHART_OPTIONS">
+      </canvas>
       <ion-item>
-        <!--<div class="xuhaitao100">
-            <div>
-                <p class="bug-new-title"></p>
-                <label>New</label>
-            </div>
-            <div>
-                <p class="bug-in-progress-title"></p>
-                <label>Error</label>
-            </div>
-        </div>-->
-      </ion-item>
-      <ion-card-content>
-            <canvas baseChart
-                [data]="doughnutChartData"
-                [labels]="doughnutChartLabels"
-                [chartType]="doughnutChartType"
-                [options]="CHART_OPTIONS">
-            </canvas>
-      </ion-card-content>
-      <ion-item>
-            <ion-icon name="star-outline" item-left></ion-icon>
-            <ion-icon name="star-outline" item-left></ion-icon>
-            <ion-icon name="star-outline" item-left></ion-icon>
-            <ion-icon name="star-outline" item-left></ion-icon>
-            <ion-icon name="star-outline" item-left></ion-icon>
+          <ion-icon name="star-outline" item-left></ion-icon>
+          <ion-icon name="star-outline" item-left></ion-icon>
+          <ion-icon name="star-outline" item-left></ion-icon>
+          <ion-icon name="star-outline" item-left></ion-icon>
+          <ion-icon name="star-outline" item-left></ion-icon>
       </ion-item>
       <ion-item>
-            <ion-icon name="star" item-left class="star"></ion-icon>
-            <ion-icon name="star" item-left class="star"></ion-icon>
-            <ion-icon name="star" item-left class="star"></ion-icon>
-            <ion-icon name="star" item-left class="star"></ion-icon>
-            <ion-icon name="star" item-left class="star"></ion-icon>
+          <ion-icon name="star" item-left class="star"></ion-icon>
+          <ion-icon name="star" item-left class="star"></ion-icon>
+          <ion-icon name="star" item-left class="star"></ion-icon>
+          <ion-icon name="star" item-left class="star"></ion-icon>
+          <ion-icon name="star" item-left class="star"></ion-icon>
       </ion-item>
       <ion-item>
-            <ion-icon name="star" item-left class="star"></ion-icon>
-            <ion-icon name="star" item-left class="star"></ion-icon>
-            <ion-icon name="star" item-left class="star"></ion-icon>
-            <ion-icon name="star-outline" item-left></ion-icon>
-            <ion-icon name="star-outline" item-left></ion-icon>
+          <ion-icon name="ribbon" item-left class="star"></ion-icon>
+          <ion-icon name="ribbon" item-left class="star"></ion-icon>
+          <ion-icon name="ribbon" item-left class="star"></ion-icon>
+          <ion-icon name="ribbon" item-left class="star"></ion-icon>
+          <ion-icon name="ribbon" item-left class="star"></ion-icon>
       </ion-item>
-      <ion-card-content>
-          <button ion-button color="secondary" full (click)="dismiss()">閉じる</button>
-      </ion-card-content>
-    </ion-card>
-<ion-content>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer on-tap="dismiss()">
+  <ion-navbar>
+    <div align="center">閉じる</div>
+  </ion-navbar>
+</ion-footer>

@@ -59,24 +59,6 @@ export class ProfileComponent implements OnInit {
             default:break;
          }
     });
-
-    // let actionSheet = this.actionSheetCtrl.create({
-    //   title: '選択してください',
-    //   buttons: [
-    //     {
-    //       text: 'TakePhoto',
-    //       handler: () => {
-    //         this.takePhoto();
-    //       }
-    //     },{
-    //       text: 'ファイルから取得する',
-    //       handler: () => {
-    //         this.choosePhoto();
-    //       }
-    //     }
-    //   ]
-    // });
-    // actionSheet.present();
   }
 
   public takePhoto() {

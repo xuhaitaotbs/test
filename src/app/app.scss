@@ -14,3 +14,20 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.menu-header {
+  display: flex;
+  padding-bottom: 10%;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  .photo {
+      margin-top: 6%;
+      margin-left: 10%;
+      width: 20%;
+      height: 20%;
+  }
+ .name {
+    margin-top: 12%;
+    margin-left: 10%;
+
+  }
+}

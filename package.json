@@ -44,6 +44,7 @@
     "cordova-plugin-file-transfer",
     "cordova-plugin-actionsheet",
     "ionic-plugin-keyboard",
+    "push-phonegap-plugin",
     "call-number"
   ],
   "cordovaPlatforms": [],

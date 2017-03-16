@@ -80,15 +80,20 @@
     </form>
 
 </ion-content>-->
+<!--cordova plugin add jpush-phonegap-plugin --variable API_KEY=8c384c845a6e3326e8f4b464-->
+<!--cordova plugin add jpush-phonegap-plugin --variable SENDER_ID=8c384c845a6e3326e8f4b464-->
 <ion-header>
   <ion-navbar>
     <ion-title>
-      FABs
+      Push Details
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <button ion-button style=" width: 31%;padding: 0px"  (click)="setMessage()">
-  </button>
+<ion-content padding>
+  <h2>Push Details Page</h2>
+  <p>
+    Clicking push notification should navigate you here
+  </p>
+  <h6>{{pushMessage}}</h6>
 </ion-content>

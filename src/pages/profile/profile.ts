@@ -4,7 +4,7 @@ import { ProfileState } from "./profile.state";
 import { ProfileStore } from "./profile.store";
 import { NavController } from "ionic-angular/index";
 import { TabsPage} from '../tabs/tabs';
-import { Camera} from 'ionic-native';
+import { Camera, Base64ToGallery} from 'ionic-native';
 import { ActionSheetController } from 'ionic-angular';
 import { ActionSheet } from 'ionic-native';
 import { ProfileImage } from "./profile.interface";
@@ -66,7 +66,7 @@ export class ProfileComponent implements OnInit {
     var options = {
       // Some common settings are 20, 50, and 100
       quality: 50,
-      destinationType: Camera.DestinationType.FILE_URI,
+      destinationType: Camera.DestinationType.DATA_URL,
       // In this app, dynamically set the picture source, Camera or photo gallery
 
       encodingType: Camera.EncodingType.JPEG,
@@ -81,17 +81,11 @@ export class ProfileComponent implements OnInit {
      * imageData就是照片的路径，关于这个imageData还有一些细微的用法，可以参考官方的文档。
      */
     Camera.getPicture(options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64:
-      let base64Image =  imageData;
-      this.path = base64Image;//给全局的文件路径赋值。
-      this.profilePicture = "data:image/jpeg;base64," + base64Image;//给image设置source。
-      alert(this.path);
 
-    /*  this.zone.run(() => this.image = base64Image);*/
+      this.profilePicture = "data:image/jpeg;base64," + imageData;//给image设置source。
+      
     }, (err) => {
-      // Handle error，出错后，在此打印出错的信息。
-      alert( err.toString());
+      // Handle error
     });
   }
   public choosePhoto() {
@@ -99,7 +93,7 @@ export class ProfileComponent implements OnInit {
     var options = {
       // Some common settings are 20, 50, and 100
       quality: 50,
-      destinationType: Camera.DestinationType.FILE_URI,
+      destinationType: Camera.DestinationType.DATA_URL,
       // In this app, dynamically set the picture source, Camera or photo gallery
       sourceType:0,//0对应的值为PHOTOLIBRARY ，即打开相册
       encodingType: Camera.EncodingType.JPEG,
@@ -108,12 +102,9 @@ export class ProfileComponent implements OnInit {
       correctOrientation: true  //Corrects Android orientation quirks
     }
     Camera.getPicture(options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64:
-      let base64Image =  imageData;
-      this.path = base64Image;
-      this.profilePicture = "data:image/jpeg;base64," + base64Image;
-      alert(base64Image);
+
+      this.profilePicture = "data:image/jpeg;base64," + imageData;
+
     }, (err) => {
       // Handle error
     });

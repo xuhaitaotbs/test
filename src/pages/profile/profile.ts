@@ -7,6 +7,7 @@ import { TabsPage} from '../tabs/tabs';
 import { Camera} from 'ionic-native';
 import { ActionSheetController } from 'ionic-angular';
 import { ActionSheet } from 'ionic-native';
+import { ProfileImage } from "./profile.interface";
 
 @Component({
   selector: "profile",
@@ -35,7 +36,7 @@ export class ProfileComponent implements OnInit {
   }
 
   public ngOnInit() {
-     // this.action.init();
+     this.profilePicture = ProfileImage.PROFILEIMAGE;
   }
 
   public onSave() {
@@ -84,7 +85,7 @@ export class ProfileComponent implements OnInit {
       // If it's base64:
       let base64Image =  imageData;
       this.path = base64Image;//给全局的文件路径赋值。
-      this.profilePicture=base64Image;//给image设置source。
+      this.profilePicture = "data:image/jpeg;base64," + base64Image;//给image设置source。
       alert(this.path);
 
     /*  this.zone.run(() => this.image = base64Image);*/
@@ -111,11 +112,10 @@ export class ProfileComponent implements OnInit {
       // If it's base64:
       let base64Image =  imageData;
       this.path = base64Image;
-      this.profilePicture=base64Image;
+      this.profilePicture = "data:image/jpeg;base64," + base64Image;
       alert(base64Image);
     }, (err) => {
       // Handle error
     });
-
   }
 }

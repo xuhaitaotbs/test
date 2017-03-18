@@ -5,6 +5,7 @@ import { LoginComponent } from '../pages/login/login';
 import { ProfileComponent } from "../pages/profile/profile";
 import { PasswordsetComponent } from "../pages/passwordset/passwordset";
 import { AboutPage } from "../pages/about/about";
+import { Backend } from '../../providers/backend';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,6 +24,10 @@ export class MyApp {
       Splashscreen.hide();
       this.initPushNotification();
     });
+
+    Backend.establish(() => {
+	console.info("Server connected");
+    })
   }
 
   initPushNotification(){

@@ -25,6 +25,7 @@ import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
 import { LoginComponent } from '../pages/login/login';
 import { ProfileComponent } from '../pages/profile/profile';
 import { PasswordsetComponent } from '../pages/passwordset/passwordset';
+import { Backend } from '../../providers/backend';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,6 @@ import { PasswordsetComponent } from '../pages/passwordset/passwordset';
     ProfileComponent,
     PasswordsetComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService, Backend]
 })
 export class AppModule {}

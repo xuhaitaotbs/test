@@ -36,4 +36,7 @@
   <plugin name="cordova-plugin-statusbar" spec="2.2.1"/>
   <plugin name="cordova-plugin-device" spec="1.1.4"/>
   <plugin name="cordova-plugin-splashscreen" spec="~4.0.1"/>
+   <plugin name="jpush-phonegap-plugin" spec="~3.0.3">
+        <variable name="APP_KEY" value="8c384c845a6e3326e8f4b464" />
+    </plugin>
 </widget>

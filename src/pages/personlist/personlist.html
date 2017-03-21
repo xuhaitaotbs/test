@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+       PersonList
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="data:image/jpeg;base64," alt="Base64 encoded image"/>
+            </ion-avatar>
+            <h2>haitao.a.xu</h2>
+            <p>15140353657</p>
+            <ion-icon name="call" item-right></ion-icon>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="data:image/jpeg;base64," alt="Base64 encoded image"/>
+            </ion-avatar>
+            <h2>haitao.a.xu</h2>
+            <h4>15140353657</h4>
+            <ion-icon name="call" item-right></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>

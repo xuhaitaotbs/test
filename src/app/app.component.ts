@@ -6,6 +6,7 @@ import { ProfileComponent } from "../pages/profile/profile";
 import { PasswordsetComponent } from "../pages/passwordset/passwordset";
 import { AboutPage } from "../pages/about/about";
 import { Backend } from '../../providers/backend';
+import { PersonListComponent } from '../pages/personlist/personlist';
 
 @Component({
   templateUrl: 'app.html'
@@ -82,6 +83,10 @@ export class MyApp {
     push.on('error', (e) => {
       console.log(e.message);
     });
+  }
+
+  public personList() {
+      this.nav.push(PersonListComponent, {});
   }
 
   public userSetting() {

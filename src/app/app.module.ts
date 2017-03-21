@@ -25,6 +25,7 @@ import { RadarChartDemoComponent } from '../pages/chartjs/radar-chart-demo';
 import { LoginComponent } from '../pages/login/login';
 import { ProfileComponent } from '../pages/profile/profile';
 import { PasswordsetComponent } from '../pages/passwordset/passwordset';
+import { PersonListComponent } from '../pages/personlist/personlist';
 import { Backend } from '../../providers/backend';
 
 @NgModule({
@@ -48,7 +49,8 @@ import { Backend } from '../../providers/backend';
     RadarChartDemoComponent,//chartJS
     LoginComponent,
     ProfileComponent,
-    PasswordsetComponent
+    PasswordsetComponent,
+    PersonListComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -75,7 +77,8 @@ import { Backend } from '../../providers/backend';
     RadarChartDemoComponent,//chartJS
     LoginComponent,
     ProfileComponent,
-    PasswordsetComponent
+    PasswordsetComponent,
+    PersonListComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService, Backend]
 })

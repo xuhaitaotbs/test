@@ -13,9 +13,6 @@ import { AlertController } from 'ionic-angular';
 })
 export class PersonListComponent implements OnInit {
 
-
-   image :string;
-
   searchQuery: string = '';
   items: string[];
 
@@ -31,23 +28,24 @@ export class PersonListComponent implements OnInit {
   }
 
   initializeItems() {
-    this.items = [
-      'haitao.a.xu'
-    ];
+    
   }
 
    getItems(ev: any) {
     // Reset items back to all of the items
-    this.initializeItems();
+    //this.initializeItems();
 
     // set val to the value of the searchbar
     let val = ev.target.value;
+    //alert(val);
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      this.state.personInfo = this.state.personInfo.filter((item) => {
+        return (item.eid.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
+    } else {
+      this.action.init();
     }
   }
 }

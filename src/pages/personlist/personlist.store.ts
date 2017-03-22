@@ -10,6 +10,6 @@ export class PersonListStore {
   }
 
   public init(data) {
-      this.state.dataInfo = data.result;
+      this.state.personInfo = data.result;
   }
 }

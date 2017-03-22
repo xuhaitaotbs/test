@@ -3,7 +3,5 @@ import {ResultInterface} from "./personlist.interface";
 
 @Injectable()
 export class PersonListState {
-    dataInfo: ResultInterface;
-    status : number;
-    message: string;
+    personInfo: ResultInterface;
 }

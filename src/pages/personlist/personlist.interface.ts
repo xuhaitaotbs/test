@@ -1,5 +1,5 @@
 export interface ResultInterface {
-    id: string,
-    contents: string,
-    ionName: string
+    eid: string,
+    avatar: string,
+    phoneNumber: string
 }

@@ -9,7 +9,7 @@ export default class PersonListAction {
   }
 
   public init() {
-    let observable = this.httpService.getFakeData('assets/checklist.json', {});
+    let observable = this.httpService.getFakeData('assets/person.json', {});
     observable.subscribe(
       (data) => this.dispatcher.dispatch(PersonListActionType.INIT, data)
     );

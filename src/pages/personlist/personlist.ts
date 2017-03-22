@@ -27,16 +27,12 @@ export class PersonListComponent implements OnInit {
   }
 
   public ngOnInit() {
-     // this.action.init();
-     this.image =""
+      this.action.init();
   }
 
   initializeItems() {
     this.items = [
-      'Amsterdam',
-      'Amsterdam',
-      'Bogota',
-      'Bogota'
+      'haitao.a.xu'
     ];
   }
 

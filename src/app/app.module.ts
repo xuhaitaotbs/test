@@ -50,7 +50,7 @@ import { Backend } from '../../providers/backend';
     LoginComponent,
     ProfileComponent,
     PasswordsetComponent,
-    PersonListComponent
+    PersonListComponent,
   ],
   imports: [
     IonicModule.forRoot(MyApp),

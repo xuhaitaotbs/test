@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Dispatcher } from "../core/Dispatcher";
 import { HttpService } from "../core/HttpService";
+import { DateService } from "../core/DateService";
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ChecklistMenuComponent } from '../pages/checklist/checklistmenu/checklistmenu';
@@ -80,6 +81,6 @@ import { Backend } from '../../providers/backend';
     PasswordsetComponent,
     PersonListComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService, Backend]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Dispatcher, HttpService, Backend, DateService]
 })
 export class AppModule {}

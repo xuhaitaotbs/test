@@ -7,6 +7,7 @@ import { ModalController} from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { ChecklistDetailComponent} from '../checklistdetail/checklistdetail';
 import { ChecklistConfirmComponent} from '../checklistconfirm/checklistconfirm';
+import { DateService } from "../../../core/DateService";
 
 @Component({
   selector: "checklistweek",
@@ -20,35 +21,13 @@ export class ChecklistWeekComponent implements OnInit {
          private store: ChecklistWeekStore,
          private navCtrl: NavController,
          private modalCtrl: ModalController, 
-         private alertCtrl: AlertController) {
+         private alertCtrl: AlertController,
+         private dateService: DateService) {
       this.ngOnInit();
   }
 
   public ngOnInit() {
-
-       let nowDate = new Date();
-       let newDay = nowDate.getDate();
-       let nowyear = nowDate.getFullYear();
-       let nowmonth = nowDate.getMonth() + 1;
-
-      // var friday = new Date((5 - newDay)*(3600*24*1000)+ nowDate.getTime()).getDate();
-       let month : string;
-       let day : string;
-
-       if (nowmonth <= 10) {
-          month = '0' + nowmonth;
-       } else {
-          month =  '' +  nowmonth;
-       }
-
-       if(newDay <= 10) {
-          day = '0' + newDay;
-       } else {
-          day = '' + newDay;
-       }
-       let ymd = nowyear + "" + month  + "" + day;
-       alert(ymd);
-      // this.action.init();
+       this.action.init();
   }
 
   public addDate(date : Date, index: number) {
@@ -56,8 +35,6 @@ export class ChecklistWeekComponent implements OnInit {
   }
 
   public openModal(id : number, contents : string) {
-     console.log(id);
-     console.log(contents);
      var jsonParam = {"id": id + 1, "question": contents};
      let modal = this.modalCtrl.create(ChecklistDetailComponent, jsonParam);
      //callbackメソッド
@@ -70,7 +47,6 @@ export class ChecklistWeekComponent implements OnInit {
                }
 	     }
 	  });
-
      modal.present();
   }
 

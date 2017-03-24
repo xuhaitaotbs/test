@@ -11,14 +11,12 @@
         <ion-icon name="calendar" item-left></ion-icon>
         <ion-label>チェック期間</ion-label>
         <ion-select [(ngModel)]="gaming">
-            <ion-option value="nes">選択してください</ion-option>
-            <ion-option value="n64">Nintendo64</ion-option>
-            <ion-option value="ps">PlayStation</ion-option>
-            <ion-option value="genesis">Sega Genesis</ion-option>
-            <ion-option value="saturn">Sega Saturn</ion-option>
-            <ion-option value="snes">SNES</ion-option>
+            <ion-option value="20170303">2017/03/03</ion-option>
+            <ion-option value="20170310">2017/03/10</ion-option>
+            <ion-option value="20170317">2017/03/17</ion-option>
+            <ion-option value="20170324">2017/03/24</ion-option>
         </ion-select>
-    </ion-item>
+     </ion-item>
     <ion-item *ngFor="let data of state.dataInfo; let idx=index" on-tap="openModal(idx,data.contents)">
         <ion-icon [name]="data.ionName" item-left></ion-icon>
         <p>{{data.contents}}</p>

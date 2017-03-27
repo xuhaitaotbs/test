@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
 })
 export class RadarChartDemoComponent {
   // Radar
-  public radarChartLabels:string[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
+  public radarChartLabels:string[] = ['Corp', 'SCM/LOG', 'TV', 'SAP/Arch', 'SMOJ', 'NEWIT', 'PMO', 'その他'];
 
   public radarChartData:any = [
-    {data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B'}
+    {data: [58, 43, 17, 9, 22, 3, 5, 10], label: 'グループ`人数'}
+   // {data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B'}
   ];
   public radarChartType:string = 'radar';
 

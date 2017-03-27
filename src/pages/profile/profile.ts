@@ -4,8 +4,7 @@ import { ProfileState } from "./profile.state";
 import { ProfileStore } from "./profile.store";
 import { NavController } from "ionic-angular/index";
 import { TabsPage} from '../tabs/tabs';
-import { Camera, Base64ToGallery} from 'ionic-native';
-import { ActionSheetController } from 'ionic-angular';
+import { Camera } from 'ionic-native';
 import { ActionSheet } from 'ionic-native';
 import { ProfileImage } from "./profile.interface";
 
@@ -30,8 +29,7 @@ export class ProfileComponent implements OnInit {
   constructor(private action: ProfileAction,
          private state: ProfileState,
          private store: ProfileStore,
-         private navCtrl: NavController,
-         private actionSheetCtrl: ActionSheetController) {
+         private navCtrl: NavController) {
       this.ngOnInit();
   }
 
@@ -88,6 +86,7 @@ export class ProfileComponent implements OnInit {
       // Handle error
     });
   }
+
   public choosePhoto() {
 
     var options = {

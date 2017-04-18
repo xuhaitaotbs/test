@@ -1,78 +1,62 @@
-import 'rxjs';
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-import { Backend } from '../../../providers/backend';
-
-import { Platform } from 'ionic-angular';
-import { JPushService } from 'ionic2-jpush';
+import { AlertController } from 'ionic-angular';
+import { JPush } from 'ionic-native';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+    selector: 'page-home',
+    templateUrl: 'home.html'
 })
 export class HomePage {
-  xxx: string;
-  constructor(public navCtrl: NavController,
-	    private platform: Platform,
-			private jPushPlugin: JPushService) {
+    constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
-				platform.ready().then( () =>{
-
-             this.jPushPlugin.openNotification()
-               .subscribe( res => {
-                 console.log('收到推送');
-                 console.log(res)
-               });
-       
-             this.jPushPlugin.receiveNotification()
-               .subscribe( res => {
-                 console.log('收到推送');
-                 console.log(res)
-               });
-       
-             this.jPushPlugin.receiveMessage()
-               .subscribe( res => {
-                 console.log('收到推送');
-                 console.log(res)
-               });
-       
-           })
-
-
-
-
-    //   Backend.socket.on("MESSAGE_CREATE", (response) => {
-		// 	    //this.logs.push(JSON.stringify(response.message));
-		// 			this.xxx = JSON.stringify(response.message);
-		// })
-  }
-
-	 /**
-    * 注册极光
-    */
-   init() {
-    this.jPushPlugin.init()
-    .then(res => alert(res))
-    .catch(err => alert(err))
     }
 
-		 /**
-    * 获取ID
-    */
-    getRegistrationID() {
-     this.jPushPlugin.getRegistrationID()
-     .then(res => alert(res))
-     .catch(err => alert(err))
-     }
+    jpushInit() {
+        JPush.init().then(res => { alert(res) });
+    }
 
+    jpushStop() {
+        JPush.stopPush().then(res => { alert(res) });
+    }
 
+    jpushGetRegistrationID() {
+        JPush.getRegistrationID().then(res => { alert(res) });
+    }
 
-	send() {
-		Backend.socket.emit("MESSAGE_CREATE", {
-			text: 'hello websocket'
-		}, (response) => {
+    jpushResumePush() {
+        JPush.resumePush().then(res => { alert(res) });
+    }
 
-		})
-	}
+    jpushStoped() {
+        JPush.resumePush().then(res => { alert(res) });
+    }
+
+    jpushSetAlias() {
+        let prompt = this.alertCtrl.create({
+            title: '设置别名',
+            inputs: [
+                {
+                    name: 'alias',
+                    placeholder: '请输入别名'
+                },
+            ],
+            buttons: [
+                {
+                    text: '取消',
+                },
+                {
+                    text: '确认',
+                    handler: data => {
+                        // 设置别名
+                        JPush.setAlias(data.alias).then(res => { 
+                            alert("别名设置成功:" + res) 
+                        });
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    }
+
 }

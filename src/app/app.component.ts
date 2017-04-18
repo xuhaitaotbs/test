@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, AlertController } from 'ionic-angular';
-import { StatusBar, Push, Splashscreen } from 'ionic-native';
+import { StatusBar, JPush, Splashscreen } from 'ionic-native';
 import { LoginComponent } from '../pages/login/login';
 import { ProfileComponent } from "../pages/profile/profile";
 import { PasswordsetComponent } from "../pages/passwordset/passwordset";
@@ -18,16 +18,19 @@ export class MyApp {
   rootPage = LoginComponent;
 
   constructor(public platform: Platform, public alertCtrl: AlertController) {
-    platform.ready().then(() => {
+        platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
-      Splashscreen.hide();
-    });
 
-    // Backend.establish(() => {
-    //  	console.info("Server connected");
-    // })
+      JPush.init().then(res => { alert(res) });  // ���n��
+
+      document.addEventListener("jpush.openNotification", (event?: any) => {
+        console.log("===============��?�������e===============")
+        alert(event.alert)
+      }, false);
+
+    });
   }
 
   public personList() {
